@@ -5,11 +5,20 @@ import org.springframework.web.bind.annotation.*
 @RestController
 @RequestMapping("/agora")
 class AgoraApi(
-    private val agoraTokenService: AgoraTokenService
+    private val agoraTokenService: AgoraChatService
 ) {
 
-    @GetMapping("/generate-token")
-    fun generateToken(@RequestBody request: AgoraGenerateTokenRequest): String {
-        return agoraTokenService.generateRtcRtmToken(request.channelName, request.userId)
+    @PostMapping("/{channelName}/open")
+    fun openChannel(@PathVariable channelName: String): AgoraTokenViewRes {
+        val userId = 1L
+
+        return AgoraTokenViewRes(agoraTokenService.openChannel(channelName, userId))
+    }
+
+    @PostMapping("/{channelName}/join")
+    fun joinChannel(@PathVariable channelName: String): AgoraTokenViewRes {
+        val userId = 2L
+
+        return AgoraTokenViewRes(agoraTokenService.joinChannel(channelName, userId))
     }
 }
