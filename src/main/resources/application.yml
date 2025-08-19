@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: chat
+agora:
+  app-certificate: e716b39d2c844ec0a914ff78fe778c41
+  app-id: 0bca0aff017d46cfb849d483f4a6ebb1
+  token-expire-seconds: 3600
