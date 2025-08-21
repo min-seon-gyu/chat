@@ -1,5 +1,5 @@
 package demo.chat
 
-data class AgoraTokenViewRes(
+data class JoinChannelViewRes(
     val token: String
 )

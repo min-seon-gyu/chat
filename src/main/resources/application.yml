@@ -5,3 +5,6 @@ agora:
   app-certificate: e716b39d2c844ec0a914ff78fe778c41
   app-id: 0bca0aff017d46cfb849d483f4a6ebb1
   token-expire-seconds: 3600
+  customer:
+    key: 19630d812e8945348bf6dbba46e79311
+    secret: 374f957ecb634bed8adc8d3bdd1a15fd

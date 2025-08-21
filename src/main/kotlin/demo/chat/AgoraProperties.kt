@@ -6,7 +6,13 @@ import org.springframework.boot.context.properties.ConfigurationProperties
 data class AgoraProperties(
     val appId: String,
     val appCertificate: String,
-    val tokenExpireSeconds: Int
+    val tokenExpireSeconds: Int,
+    val customer: CustomerProperties
+)
+
+data class CustomerProperties(
+    val key: String,
+    val secret: String
 )
 
 

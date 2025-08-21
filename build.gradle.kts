@@ -9,12 +9,6 @@ group = "demo"
 version = "0.0.1-SNAPSHOT"
 description = "chat"
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
-    }
-}
-
 repositories {
     mavenCentral()
 }
@@ -25,6 +19,9 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("io.agora:authentication:2.1.3")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.cloud:spring-cloud-starter-openfeign:4.3.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("io.github.openfeign:feign-okhttp:12.5")
     runtimeOnly("com.h2database:h2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
